@@ -1,0 +1,192 @@
+{
+  "original_query": "I’m a data science student looking for internship opportunities starting in 2026. I’m interested in roles that involve machine learning, data analysis, or AI research, and I have hands-on experience with Python, SQL, and visualization tools. I’m open to remote, hybrid, or on-site internships where I can apply my technical skills, work on real-world data problems, and grow as part of a professional data science team. Ideally, I’m looking for positions that value innovation, collaboration, and learning.",
+  "query_metadata": {
+    "character_count": 506,
+    "word_count": 77,
+    "processed_at": "2025-10-14T05:25:16.868079",
+    "agent_version": "PlannerAgent v1.0"
+  },
+  "subqueries": [
+    {
+      "id": "sq_001_20251014_052516",
+      "text": "```",
+      "order": 1,
+      "category": "current_state",
+      "priority": "high",
+      "estimated_complexity": "low",
+      "keywords": [],
+      "metadata": {
+        "created_at": "2025-10-14T05:25:16.868079",
+        "agent": "PlannerAgent",
+        "version": "1.0",
+        "parent_query": "I’m a data science student looking for internship opportunities starting in 2026. I’m interested in ...",
+        "character_count": 3,
+        "word_count": 1
+      }
+    },
+    {
+      "id": "sq_002_20251014_052516",
+      "text": "What are the most in-demand machine learning, data analysis, or AI research internship roles starting in 2026 across various industries (tech, finance, healthcare, etc.) and what are the key skills required to secure these positions?\",",
+      "order": 2,
+      "category": "key_players",
+      "priority": "high",
+      "estimated_complexity": "high",
+      "keywords": [
+        "most",
+        "in-demand",
+        "machine",
+        "learning",
+        "data",
+        "analysis",
+        "research",
+        "internship"
+      ],
+      "metadata": {
+        "created_at": "2025-10-14T05:25:16.868079",
+        "agent": "PlannerAgent",
+        "version": "1.0",
+        "parent_query": "I’m a data science student looking for internship opportunities starting in 2026. I’m interested in ...",
+        "character_count": 235,
+        "word_count": 35
+      }
+    },
+    {
+      "id": "sq_003_20251014_052516",
+      "text": "Which top companies, startups, and research institutions offer remote, hybrid, or on-site internships for data science students like myself, focusing on machine learning, data analysis, or AI research, and what are their typical internship programs and benefits?\",",
+      "order": 3,
+      "category": "key_players",
+      "priority": "medium",
+      "estimated_complexity": "high",
+      "keywords": [
+        "companies",
+        "startups",
+        "research",
+        "institutions",
+        "offer",
+        "remote",
+        "hybrid",
+        "on-site"
+      ],
+      "metadata": {
+        "created_at": "2025-10-14T05:25:16.868079",
+        "agent": "PlannerAgent",
+        "version": "1.0",
+        "parent_query": "I’m a data science student looking for internship opportunities starting in 2026. I’m interested in ...",
+        "character_count": 264,
+        "word_count": 37
+      }
+    },
+    {
+      "id": "sq_004_20251014_052516",
+      "text": "What are the current market trends, adoption rates, and economic factors driving demand for data science professionals with expertise in machine learning, data analysis, or AI research globally, including industry reports, forecasts, and growth projections?\",",
+      "order": 4,
+      "category": "current_state",
+      "priority": "medium",
+      "estimated_complexity": "high",
+      "keywords": [
+        "current",
+        "market",
+        "trends",
+        "adoption",
+        "rates",
+        "economic",
+        "factors",
+        "driving"
+      ],
+      "metadata": {
+        "created_at": "2025-10-14T05:25:16.868079",
+        "agent": "PlannerAgent",
+        "version": "1.0",
+        "parent_query": "I’m a data science student looking for internship opportunities starting in 2026. I’m interested in ...",
+        "character_count": 259,
+        "word_count": 35
+      }
+    },
+    {
+      "id": "sq_005_20251014_052516",
+      "text": "What are the primary technical challenges, limitations, and barriers facing data science teams today, such as data quality issues, model interpretability, bias, and explainability concerns that need to be addressed for effective decision-making?\",",
+      "order": 5,
+      "category": "challenges",
+      "priority": "medium",
+      "estimated_complexity": "high",
+      "keywords": [
+        "primary",
+        "technical",
+        "challenges",
+        "limitations",
+        "barriers",
+        "facing",
+        "data",
+        "science"
+      ],
+      "metadata": {
+        "created_at": "2025-10-14T05:25:16.868079",
+        "agent": "PlannerAgent",
+        "version": "1.0",
+        "parent_query": "I’m a data science student looking for internship opportunities starting in 2026. I’m interested in ...",
+        "character_count": 247,
+        "word_count": 33
+      }
+    },
+    {
+      "id": "sq_006_20251014_052516",
+      "text": "What are the projected future developments, emerging technologies, and long-term outlook for machine learning, data analysis, or AI research in various industries over the next 5-10 years, including potential game-changing innovations and their expected impact on business strategy and operations?",
+      "order": 6,
+      "category": "future_outlook",
+      "priority": "medium",
+      "estimated_complexity": "high",
+      "keywords": [
+        "projected",
+        "future",
+        "developments",
+        "emerging",
+        "technologies",
+        "long-term",
+        "outlook",
+        "machine"
+      ],
+      "metadata": {
+        "created_at": "2025-10-14T05:25:16.868079",
+        "agent": "PlannerAgent",
+        "version": "1.0",
+        "parent_query": "I’m a data science student looking for internship opportunities starting in 2026. I’m interested in ...",
+        "character_count": 297,
+        "word_count": 40
+      }
+    },
+    {
+      "id": "sq_007_20251014_052516",
+      "text": "```",
+      "order": 7,
+      "category": "general",
+      "priority": "low",
+      "estimated_complexity": "low",
+      "keywords": [],
+      "metadata": {
+        "created_at": "2025-10-14T05:25:16.868079",
+        "agent": "PlannerAgent",
+        "version": "1.0",
+        "parent_query": "I’m a data science student looking for internship opportunities starting in 2026. I’m interested in ...",
+        "character_count": 3,
+        "word_count": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_count": 7,
+    "categories": {
+      "current_state": 2,
+      "key_players": 2,
+      "challenges": 1,
+      "future_outlook": 1,
+      "general": 1
+    },
+    "priority_distribution": {
+      "high": 2,
+      "medium": 4,
+      "low": 1
+    },
+    "avg_complexity": "medium"
+  },
+  "timestamp": "2025-10-14T05:25:16.868079"
+}

@@ -1,0 +1,94 @@
+{
+  "data": {
+    "subquery_count": 7,
+    "total_queries_generated": 35,
+    "generated": [
+      {
+        "subquery_id": "sq_001_20251014_052516",
+        "original_subquery": "```",
+        "queries": [
+          "site:mckinsey.com OR site:bloomberg.com 'digital transformation' AND 'latest research'",
+          "filetype:pdf intitle:'digitalization' AND 'business strategy' -site:wikipedia.org",
+          "scholar.google.com 'impact of AI on economy' AND '2024 predictions'",
+          "'recent studies on e-commerce growth' AND 'market trends' site:mckinsey.com OR site:gartner.com",
+          "intitle:'innovation in finance' AND 'latest reports' -site:news.google.com filetype:pdf"
+        ],
+        "query_count": 5
+      },
+      {
+        "subquery_id": "sq_002_20251014_052516",
+        "original_subquery": "What are the most in-demand machine learning, data analysis, or AI research internship roles starting in 2026 across various industries (tech, finance, healthcare, etc.) and what are the key skills required to secure these positions?\",",
+        "queries": [
+          "site:mckinsey.com OR site:bloomberg.com intitle:AI research internship demand 2026\",",
+          "filetype:pdf scholar.google.com machine learning data analysis internship skills required 2026\",",
+          "intitle:\"latest\" tech industry AI research internships starting in 2026\",",
+          "site:harvard.edu filetype:pdf OR site:stanford.edu intitle:data science internship key skills 2024\",",
+          "site:indeed.com OR site:glassdoor.com recent AI research internships across various industries"
+        ],
+        "query_count": 5
+      },
+      {
+        "subquery_id": "sq_003_20251014_052516",
+        "original_subquery": "Which top companies, startups, and research institutions offer remote, hybrid, or on-site internships for data science students like myself, focusing on machine learning, data analysis, or AI research, and what are their typical internship programs and benefits?\",",
+        "queries": [
+          "site:mckinsey.com OR site:bloomberg.com internships data science machine learning AI research",
+          "filetype:pdf intitle:internship program data analysis AI research students 2024",
+          "scholar.google.com top companies startups research institutions remote hybrid on-site internships data science",
+          "intitle:data science internship benefits machine learning AI research students recent programs",
+          "site:harvard.edu OR site:stanford.edu latest data science internship opportunities machine learning AI research"
+        ],
+        "query_count": 5
+      },
+      {
+        "subquery_id": "sq_004_20251014_052516",
+        "original_subquery": "What are the current market trends, adoption rates, and economic factors driving demand for data science professionals with expertise in machine learning, data analysis, or AI research globally, including industry reports, forecasts, and growth projections?\",",
+        "queries": [
+          "site:mckinsey.com OR site:bloomberg.com data science market trends 2024\",",
+          "filetype:pdf intitle:\"latest\" data science adoption rates globally machine learning\",",
+          "scholar.google.com AI research growth projections industry reports forecasts 2023-2025\",",
+          "intitle:\"report\" data analysis demand drivers economic factors worldwide McKinsey\",",
+          "site:gartner.com OR site:forrester.com recent market forecast data science professionals AI"
+        ],
+        "query_count": 5
+      },
+      {
+        "subquery_id": "sq_005_20251014_052516",
+        "original_subquery": "What are the primary technical challenges, limitations, and barriers facing data science teams today, such as data quality issues, model interpretability, bias, and explainability concerns that need to be addressed for effective decision-making?\",",
+        "queries": [
+          "site:mckinsey.com OR site:bloomberg.com data science challenges 2024",
+          "filetype:pdf intitle:data quality issues AND model interpretability scholar.google.com",
+          "site:harvard.edu OR site:stanford.edu recent research on data science limitations",
+          "intitle:model explainability concerns AND data bias in decision-making McKinsey report",
+          "latest studies on data science barriers to effective decision-making Google Scholar"
+        ],
+        "query_count": 5
+      },
+      {
+        "subquery_id": "sq_006_20251014_052516",
+        "original_subquery": "What are the projected future developments, emerging technologies, and long-term outlook for machine learning, data analysis, or AI research in various industries over the next 5-10 years, including potential game-changing innovations and their expected impact on business strategy and operations?",
+        "queries": [
+          "site:mckinsey.com OR site:bloomberg.com machine learning future developments 2024\",",
+          "filetype:pdf scholar.google.com AI research trends next 10 years\",",
+          "intitle:\"\"machine learning\"\" OR intitle:\"data analysis\" latest innovations in various industries\",",
+          "site:wikipedia.org OR site:harvard.edu emerging technologies impact on business strategy operations\",",
+          "site:gartner.com OR site:forrester.com machine learning data analysis AI research outlook 2025-2030"
+        ],
+        "query_count": 5
+      },
+      {
+        "subquery_id": "sq_007_20251014_052516",
+        "original_subquery": "```",
+        "queries": [
+          "site:mckinsey.com OR site:bloomberg.com filetype:pdf intitle: 'digital transformation' AND recent",
+          "scholar.google.com intitle: 'artificial intelligence adoption' AND latest research findings 2024",
+          "site:mckinsey.com filetype:pdf intitle: 'future of work' AND recent trends and insights",
+          "site:bloomberg.com OR site:wsj.com filetype:pdf intitle: 'cybersecurity threats' AND latest news updates",
+          "site:mckinsey.com OR site:gartner.com filetype:pdf intitle: 'digital innovation' AND recent case studies"
+        ],
+        "query_count": 5
+      }
+    ],
+    "timestamp": "2025-10-14T05:49:02.943728"
+  },
+  "status": "success"
+}
