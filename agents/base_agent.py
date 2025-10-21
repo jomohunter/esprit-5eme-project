@@ -15,7 +15,7 @@ class BaseAgent(ABC):
         self.llm = self._initialize_llm()
     
     def _initialize_llm(self) -> LLM:
-        """Initialize the language model for the agent using Ollama with Llama 3.1"""
+    """Initialize the language model for the agent using Ollama with Llama 3.1"""
         ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
         model_name = os.getenv("OLLAMA_MODEL", "llama3.1")
         

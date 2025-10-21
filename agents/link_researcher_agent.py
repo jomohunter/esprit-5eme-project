@@ -1,21 +1,23 @@
 from typing import Dict, Any, List
 import os
-from serpapi import GoogleSearch
+import http.client
+import json
+import asyncio
 from .base_agent import BaseAgent
 
 class LinkResearcherAgent(BaseAgent):
     """
-    Agent responsible for finding the top 5 relevant links for each search query using SerpAPI
+    Agent responsible for finding the top 5 relevant links for each search query using Serper.dev
     """
     
     def __init__(self):
         super().__init__(
             name="LinkResearcherAgent",
-            description="Finds relevant links using Google search via SerpAPI"
+            description="Finds relevant links using Google search via Serper.dev"
         )
-        self.serp_api_key = os.getenv("SERP_API_KEY")
-        if not self.serp_api_key:
-            self.log("Warning: SERP_API_KEY not found in environment variables")
+        self.serper_api_key = os.getenv("SERPER_API_KEY")  # ← Remove the hardcoded key
+        if not self.serper_api_key:
+            self.log("Warning: SERPER_API_KEY not found in environment variables")
     
     async def execute(self, input_data: List[Dict[str, str]]) -> Dict[str, Any]:
         """
@@ -38,7 +40,7 @@ class LinkResearcherAgent(BaseAgent):
                 
                 self.log(f"Searching for: {optimized_query}")
                 
-                # Search using SerpAPI
+                # Search using Serper.dev
                 links = await self._search_links(optimized_query)
                 
                 result = {
@@ -68,7 +70,7 @@ class LinkResearcherAgent(BaseAgent):
     
     async def _search_links(self, query: str, num_results: int = 5) -> List[Dict[str, str]]:
         """
-        Search for links using SerpAPI
+        Search for links using Serper.dev
         
         Args:
             query: The search query
@@ -78,37 +80,60 @@ class LinkResearcherAgent(BaseAgent):
             List of dictionaries containing link information
         """
         try:
-            if not self.serp_api_key:
+            if not self.serper_api_key:
                 # Fallback: return mock data for development
                 return self._get_mock_links(query, num_results)
             
-            search = GoogleSearch({
-                "q": query,
-                "api_key": self.serp_api_key,
-                "num": num_results,
-                "hl": "en",
-                "gl": "us"
-            })
+            # Use Serper.dev API
+            links = await self._serper_search(query, num_results)
+            return links
             
-            results = search.get_dict()
+        except Exception as e:
+            self.log(f"Error in Serper.dev search: {str(e)}")
+            # Return mock data as fallback
+            return self._get_mock_links(query, num_results)
+    
+    async def _serper_search(self, query: str, num_results: int = 5) -> List[Dict[str, str]]:
+        """
+        Perform search using Serper.dev API
+        """
+        try:
+            conn = http.client.HTTPSConnection("google.serper.dev")
+            payload = json.dumps({
+                "q": query,
+                "num": num_results
+            })
+            headers = {
+                'X-API-KEY': self.serper_api_key,
+                'Content-Type': 'application/json'
+            }
+            
+            # Run the HTTP request in a thread pool to make it async-friendly
+            loop = asyncio.get_event_loop()
+            await loop.run_in_executor(None, lambda: conn.request("POST", "/search", payload, headers))
+            
+            response = await loop.run_in_executor(None, conn.getresponse)
+            data = await loop.run_in_executor(None, response.read)
+            conn.close()
+            
+            result_data = json.loads(data.decode("utf-8"))
             
             links = []
-            if "organic_results" in results:
-                for result in results["organic_results"][:num_results]:
+            if "organic" in result_data:
+                for result in result_data["organic"][:num_results]:
                     link_data = {
                         "title": result.get("title", ""),
                         "url": result.get("link", ""),
                         "snippet": result.get("snippet", ""),
-                        "source": result.get("displayed_link", "")
+                        "source": result.get("displayLink", "") or result.get("link", "")[:50] + "..."
                     }
                     links.append(link_data)
             
             return links
             
         except Exception as e:
-            self.log(f"Error in SerpAPI search: {str(e)}")
-            # Return mock data as fallback
-            return self._get_mock_links(query, num_results)
+            self.log(f"Serper.dev API error: {str(e)}")
+            raise e
     
     def _get_mock_links(self, query: str, num_results: int) -> List[Dict[str, str]]:
         """

@@ -11,6 +11,9 @@ import os
 import sys
 from datetime import datetime
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Handle imports so the file can run both as a package module and standalone script
 try:
     # Preferred relative import when using this file inside the 'agents' package

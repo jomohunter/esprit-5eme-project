@@ -6,6 +6,9 @@ import os
 import sys
 from datetime import datetime
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Handle imports for both module and standalone execution
 try:
     from .base_agent import BaseAgent

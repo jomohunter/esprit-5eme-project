@@ -3,6 +3,9 @@ import asyncio
 from crawl4ai import AsyncWebCrawler
 from .base_agent import BaseAgent
 
+from dotenv import load_dotenv
+load_dotenv()
+
 class ScraperAgent(BaseAgent):
     """
     Agent responsible for scraping content from links using Crawl4AI
